@@ -19,7 +19,7 @@ public class HomePage extends BasePage{
 
     //WebElements for all messages displayed
     //*****************************************************
-    @FindBy(xpath="//h3[normalize-space()='Hi, David Ebula']")
+    @FindBy(xpath="//h3[normalize-space()='Hi, Sibusiso Nyundu']")
     WebElement Displayed_Name;
     @FindBy(xpath="//div[@class='text-green-600 text-center text-lg']") WebElement Option_Name_Text;
     @FindBy(xpath="//h1[normalize-space()='DISCOVERY HEALTH MEDICAL SCHEME']") WebElement Medical_Scheme_Txt;
@@ -104,22 +104,18 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//input[@name='medianContributionChildDependent']") WebElement medianContributionChildDependent;
 
     //
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/input[1]") WebElement Confinement_Check;
+    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]" +
+            "/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/input[1]") WebElement Confinement_Check;
     @FindBy(xpath="//tbody/tr[2]/td[3]/div[2]//*[name()='svg']") WebElement Confinement_drop;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/" +
-            "div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/table[1]" +
-            "/tbody[1]/tr[2]/td[1]/input[1]") WebElement BenefitCeiling__Check;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/" +
-            "div[1]/div[2]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/" +
-            "tbody[1]/tr[2]/td[1]/input[1]")WebElement HPV_BenefitCeiling__Check;
+    @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/" +
+            "tbody/tr[3]/td/div/div[1]/table/tbody/tr[2]/td[1]/input") WebElement BenefitCeiling__Check;
+    @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table" +
+            "/tbody/tr[5]/td/div/div[1]/table/tbody/tr[2]/td[1]/input")WebElement HPV_BenefitCeiling__Check;
 
+    @FindBy(xpath="//tbody/tr[2]/td[4]/div[1]/input[1]")WebElement Benefit_Member_Amount;
 
-    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/div/div[2]/table/tbody/tr" +
-            "[3]/td/div[1]/table/tbody/tr[2]/td[4]/div/input")WebElement Benefit_Member_Amount;
-
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]" +
-            "/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[1]/div[1]" +
-            "/table[1]/tbody[1]/tr[2]/td[5]/div[1]/input[1]") WebElement Benefit_Family_Amount;
+    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/div/div[2]/table/tbody/" +
+            "tr[3]/td/div/div[1]/table/tbody/tr[2]/td[5]/div/input") WebElement Benefit_Family_Amount;
     @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/" +
             "div[1]/div[1]/div[2]/table[1]/tbody[1]/" +
             "tr[3]/td[1]/div[1]/table[1]/tbody[1]/tr[5]/td[1]/input[1]") WebElement Co_Payment_Drop;
@@ -129,14 +125,15 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]" +
             "/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td" +
             "[1]/div[1]/table[1]/tbody[1]/tr[5]/td[5]/div[1]/input[1]") WebElement Co_Payment_Fam_Per;
-    @FindBy(xpath="/html/body/div/div/div/div/main/div" +
-            "/div/div[2]/table/tbody/tr[3]/td/div[2]/table/tbody/tr[3]/td[1]/input") WebElement Setting_General;
-    @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/" +
-            "tbody/tr[3]/td/div[2]/table/tbody/tr[2]/td[1]/input") WebElement Network;
+    @FindBy(xpath="//td[@class='border-b py-2 border-gray-300" +
+            " text-gray-600 text-start w-16']//input[@name='service-" +
+            "Setting General Hospital-1']") WebElement Setting_General;
+    @FindBy(xpath="//td[@class='border-b py-2 border-gray-300 text-gray-600" +
+            " text-start w-16']//input[@name='service-Network-0']") WebElement Network;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/main/div/div/div[2]/table/tbody/tr[4]/td[1]/input")WebElement HPV_Vaccine;
-    @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/tbody/tr[3]/td/div[1]/table" +
-            "/tbody/tr[3]/td[1]/input")WebElement Threshold_Check;
+    @FindBy(xpath="//tbody/tr[4]/td[1]/input[1]")WebElement HPV_Vaccine;
+    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/div/div[2]/table/" +
+            "tbody/tr[3]/td/div/div[1]/table/tbody/tr[3]/td[1]/input")WebElement Threshold_Check;
     @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/tbody/" +
             "tr[3]/td/div[1]/table/tbody/tr[3]/td[4]/div/input")WebElement Threshold_Member;
     @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/" +
@@ -145,33 +142,26 @@ public class HomePage extends BasePage{
             "//input[@name='service-Setting Specialised Hospital-2']")WebElement Set_Specialised;
 
 //____________________________________________________________
-@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/table[1]" +
-        "/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[4]/div[1]/input[1]") WebElement HPV_Benefit_Member_Amount;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/" +
-            "div[2]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[5]/div[1]/input[1]")
+@FindBy(xpath="//tbody/tr[2]/td[4]/div[1]/input[1]") WebElement HPV_Benefit_Member_Amount;
+    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/div/div[2]" +
+            "/table/tbody/tr[5]/td/div/div[1]/table/tbody/tr[2]/td[5]/div/input")
     WebElement HPV_Benefit_Family_Amount;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]" +
-            "/main[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[9]/td[1]/input[1]") WebElement Physiotherapy;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/" +
-            "div[1]/div[2]/table[1]/tbody[1]/tr[10]/td[1]/div[1]/table[1]/" +
-            "tbody[1]/tr[2]/td[1]/input[1]") WebElement Physio_Benefit_Check;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/" +
-            "div[2]/table[1]/tbody[1]/tr[10]/td[1]/div[1]/table[1]/tbody[1]" +
-            "/tr[2]/td[4]/div[1]/input[1]") WebElement Physio_Member_amount;
-    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div" +
-            "[1]/div[2]/table[1]/tbody[1]/tr[10]/td[1]/div[1]/table[1]/" +
-            "tbody[1]/tr[2]/td[5]/div[1]/input[1]") WebElement Physio_Family_Amount;
+    @FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/tbody/tr[9]/td[1]/input") WebElement Physiotherapy;
+    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/div/div[2]" +
+            "/table/tbody/tr[10]/td/div/div[1]/table/tbody/tr[2]/td[1]/input") WebElement Physio_Benefit_Check;
+    @FindBy(xpath="/html/body/div/div/div/div/main/" +
+            "div/div/div[2]/table/tbody/tr[10]/td/div/div[1]/table/tbody/tr[2]/td[4]/div/input") WebElement Physio_Member_amount;
+    @FindBy(xpath="//tbody/tr[2]/td[4]/div[1]/input[1]") WebElement Physio_Family_Amount;
 
     @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/" +
             "div[2]/table[1]/tbody[1]/tr[4]/td[1]/input[1]")WebElement Homeophatic_check;
-    @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/table[1]/" +
-            "tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/input[1]") WebElement Home_Benefit_Check;
-    @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/" +
-            "table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[4]/div[1]/input[1]") WebElement Home_Benefit_Member_ammout;
-    @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/" +
-            "table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[5]/div[1]/input[1]")WebElement Home_Benefit_Family_Amount;
-    @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/" +
-            "table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[1]/input[1]")WebElement Above_Thresh_Check;
+    @FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/div[1]" +
+            "/main[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]" +
+            "/tr[5]/td[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/input[1]") WebElement Home_Benefit_Check;
+    @FindBy(xpath="(//input[@placeholder='0'])[1]") WebElement Home_Benefit_Member_ammout;
+    @FindBy(xpath="(//input[@placeholder='0'])[2]")WebElement Home_Benefit_Family_Amount;
+    @FindBy(xpath="//*[@id=\"root\"]/div/div/div/main/div/" +
+            "div/div[2]/table/tbody/tr[10]/td/div/div[1]/table/tbody/tr[4]/td[1]/input")WebElement Above_Thresh_Check;
     @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]" +
             "/div[2]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[4]/div[1]/input[1]")WebElement Above_Thresh_Member_Amount;
     @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div" +
@@ -180,7 +170,7 @@ public class HomePage extends BasePage{
             "input[@name='service-Setting Sub Acute Facility-3']")WebElement Setting_Sub_Acute;
     @FindBy(xpath="//span[normalize-space()='FLEXI FED 3 GRID']") WebElement Flex_3;
 //__________________________________________________________________
-    public void setFlex_3(){Flex_3.click();}
+    public void setFlex_3(){Flexi_Fed.click();}
     public void setHomeophatic_check(){Homeophatic_check.click();}
     public void setAbove_Thresh_Check(){Above_Thresh_Check.click();}
     public void setAbove_Thresh_Member_Amount(){Above_Thresh_Member_Amount.sendKeys("150");}
