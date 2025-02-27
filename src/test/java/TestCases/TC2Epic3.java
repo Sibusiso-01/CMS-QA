@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ExtentReportManager;
 
-public class TC5_Epic3  extends BaseClass {
+public class TC2Epic3 extends BaseClass {
 
     //Flat Contribution --
     //************************************
@@ -80,7 +80,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 3)
     void Confinements_Test() throws InterruptedException {
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step: Verify functionality for confinements");
+        test = extent.createTest("TC2Epic3 Step: Verify functionality for confinements");
         //Confinements options
         //*************************************************
         try{
@@ -110,7 +110,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 4)
     void HPV_Vaccine_Test () throws InterruptedException {
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step: Verify functionality HPV Vaccine");
+        test = extent.createTest("TC2Epic3 Step: Verify functionality HPV Vaccine");
         ExtentReportManager.setExtentTest(test);
         try{
         //HPV OPTION
@@ -135,7 +135,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 5)
     void Physio_Test() throws InterruptedException {
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step: Verify functionality for Physiotherapy");
+        test = extent.createTest("TC2Epic3 Step: Verify functionality for Physiotherapy");
         ExtentReportManager.setExtentTest(test);
         try{
         //Physiotherapy test
@@ -160,7 +160,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 6)
     void HomeOphatic_Test(){
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step: Verify functionality Home Ophathic.");
+        test = extent.createTest("TC2Epic3 Step: Verify functionality Home Ophathic.");
         ExtentReportManager.setExtentTest(test);
         try{
             //Home Ophatic test
@@ -191,7 +191,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 2)
     void Benefit_Option_Name_Test(){
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step 2: Verify functionality for Benefit option name");
+        test = extent.createTest("TC2Epic3 Step 2: Verify functionality for Benefit option name");
         ExtentReportManager.setExtentTest(test);
         try{
 
@@ -224,7 +224,7 @@ public class TC5_Epic3  extends BaseClass {
     @Test(priority = 1)
     void Data_Officer_login_Test(){
         HomePage hp = new HomePage(driver);
-        test = extent.createTest("TC5_Epic3 Step 1: Verify Login functionality for Data Officer");
+        test = extent.createTest("TC2Epic3 Step 1: Verify Login functionality for Data Officer");
         ExtentReportManager.setExtentTest(test);
 
         try {
