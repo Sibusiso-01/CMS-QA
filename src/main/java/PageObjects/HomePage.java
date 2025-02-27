@@ -241,6 +241,8 @@ public class HomePage extends BasePage{
 
 
 
+    //Methods for all Options
+    //********************************
 
 
     //Methods for Income Band Contribution
@@ -261,7 +263,9 @@ public class HomePage extends BasePage{
 
     //Methods for all modules
     //***************************************
-
+    public void Option_Status() {
+        Option_Status.click();
+    }
     public void setSave_Continue_btn() {
         Save_Continue_Btn.click();
     }
