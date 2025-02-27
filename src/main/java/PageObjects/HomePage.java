@@ -2,7 +2,6 @@ package PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.WheelInput;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
@@ -45,11 +44,6 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//input[@name='totalMemberContribution']") WebElement Total_Member_Contribution;
     @FindBy(xpath="//input[@name='totalAdultContribution']") WebElement Total_Adult_Contribution;
     @FindBy(xpath="//input[@name='childTotalContribution']") WebElement Total_Child_Contribution;
-    @FindBy(xpath="//input[@name='memberSavingsContribution']") WebElement MemberSavingContribution;
-
-    @FindBy(xpath="//input[@name='adultDependentSavingsContribution']")WebElement AdultSavingContribution;
-    @FindBy(xpath="//input[@name='childDependentSavingsContribution']")WebElement ChildSavingContribution;
-    //@FindBy(xpath="/html/body/div/div/div/div/main/div/div/div[2]/table/tbody/tr[2]/td[3]/div[2]/svg")WebElement Confinement_drop;
 
 
 
@@ -168,14 +162,14 @@ public class HomePage extends BasePage{
             "[2]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[5]/div[1]/input[1]")WebElement Above_Thres_Family_Amount;
     @FindBy(xpath="//td[@class='border-b py-2 border-gray-300 text-gray-600 text-start w-16']//" +
             "input[@name='service-Setting Sub Acute Facility-3']")WebElement Setting_Sub_Acute;
-    @FindBy(xpath="//span[normalize-space()='FLEXI FED 3 GRID']") WebElement Flex_3;
+
 //__________________________________________________________________
     public void setFlex_3(){Flexi_Fed.click();}
     public void setHomeophatic_check(){Homeophatic_check.click();}
-    public void setAbove_Thresh_Check(){Above_Thresh_Check.click();}
-    public void setAbove_Thresh_Member_Amount(){Above_Thresh_Member_Amount.sendKeys("150");}
-    public void setAbove_Thres_Family_Amount(){Above_Thres_Family_Amount.sendKeys("150");}
-    public void setSetting_Sub_Acute(){Setting_Sub_Acute.click();}
+//    public void setAbove_Thresh_Check(){Above_Thresh_Check.click();}
+//    public void setAbove_Thresh_Member_Amount(){Above_Thresh_Member_Amount.sendKeys("150");}
+//    public void setAbove_Thres_Family_Amount(){Above_Thres_Family_Amount.sendKeys("150");}
+//    public void setSetting_Sub_Acute(){Setting_Sub_Acute.click();}
     public void setHome_Benefit_Member_ammout(){Home_Benefit_Member_ammout.sendKeys("200");}
     public void setHome_Benefit_Family_Amount(){Home_Benefit_Family_Amount.sendKeys("200");}
     public void setHome_Benefit_Check(){Home_Benefit_Check.click();}
@@ -191,88 +185,66 @@ public class HomePage extends BasePage{
     public void setSet_Specialised(){Set_Specialised.click();};
     public void setHPV_Vaccine(){HPV_Vaccine.click();}
     public void setThreshold_Check(){Threshold_Check.click();}
-    public void setThreshold_Member(){Threshold_Member.sendKeys("100");}
-    public void setThreshold_Fam(){Threshold_Fam.sendKeys("100");}
+//    public void setThreshold_Member(){Threshold_Member.sendKeys("100");}
+//    public void setThreshold_Fam(){Threshold_Fam.sendKeys("100");}
     public void setConfinement_Check(){Confinement_Check.click();}
     public void setConfinement_drop(){Confinement_drop.click();}
     public void setBenefitCeiling__Check(){BenefitCeiling__Check.click();}
     public void setBenefit_Member_Amount(){Benefit_Member_Amount.sendKeys("100");}
     public void setBenefit_Family_Amount(){Benefit_Family_Amount.sendKeys("100");}
-    public void setCo_Payment_Drop(){Co_Payment_Drop.click();}
-    public void setCo_Payment_Member_Per(){Co_Payment_Member_Per.sendKeys("10");}
-    public void setCo_Payment_Fam_Per(){Co_Payment_Fam_Per.sendKeys("5");}
+//    public void setCo_Payment_Drop(){Co_Payment_Drop.click();}
+//    public void setCo_Payment_Member_Per(){Co_Payment_Member_Per.sendKeys("10");}
+//    public void setCo_Payment_Fam_Per(){Co_Payment_Fam_Per.sendKeys("5");}
     public void setSetting_General(){Setting_General.click();}
-    public void setFlexi_Fed(){Flexi_Fed.click();}
+
 
     //*************************************
-    public void setCustom(){Custom.click();}
-    public void setHome(){CMS_LOGO.click();}
-    public  void setSign_up_btn(){Sign_Out_Btn.click();}
+//    public void setCustom(){Custom.click();}
+//    public void setHome(){CMS_LOGO.click();}
+//    public  void setSign_up_btn(){Sign_Out_Btn.click();}
     //Verification Methods
     //********************************
-    public String setOptionNameText(){
-        String actual = Option_Name_Text.getText();
-        return actual;
-    }
-    public String setYear(){
-        String actual_year = Year.getText();
-        return actual_year;
-    }
-    public void setData_Officer_Profile(){Data_Officer_Profile.click();}
-    public void setProfile(){Profile.click();}
+//    public String setOptionNameText(){
+//        String actual = Option_Name_Text.getText();
+//        return actual;
+//    }
+//    public String setYear(){
+//        String actual_year = Year.getText();
+//        return actual_year;
+//    }
+//    public void setData_Officer_Profile(){Data_Officer_Profile.click();}
+//    public void setProfile(){Profile.click();}
     public String getMessage(){
        String message = Displayed_Name.getText();
         return message;
     }
-    public void setSignOut(){Sign_Out_Btn.click();}
-    public String getMedical_Scheme(){
-        String message= Medical_Scheme_Txt.getText();
-        return message;
-    }
-    public boolean isVideoDisplayed(){
-
-        return video_element.isDisplayed();
-    }
-    public void clickPayButton(){
-        video_element.click();
-    }
-    public boolean isVideoPlaying(){
-        String paused = video_element.getAttribute("paused");
-        return paused.equals(false);
-    }
+//    public void setSignOut(){Sign_Out_Btn.click();}
+//    public String getMedical_Scheme(){
+//        String message= Medical_Scheme_Txt.getText();
+//        return message;
+//    }
+//    public boolean isVideoDisplayed(){
+//
+//        return video_element.isDisplayed();
+//    }
+//    public void clickPayButton(){
+//        video_element.click();
+//    }
+//    public boolean isVideoPlaying(){
+//        String paused = video_element.getAttribute("paused");
+//        return paused.equals(false);
+//    }
 
     //Methods for all option status
     //***************************************
     public  void setContinuation(){Continuation.click();}
 
-    public void setRestructuring(){restructuring.click();}
 
-    //Methods for all Options
-    //********************************
-//    public  void setClassic_Delta_Core()
-//    {Classic_Delta_Core.click();}
-//
-//    public void setClassic_Core(){Classic_Core.click();}
-//
-//    public void setKeyCare_Core() {
-//        KeyCare_Core.click();
-//    }
-//    public void setKeyCare_Start_Edo()
-//    {KeyCare_Start_Edo.click();}
-   
+
+
 
     //Methods for Income Band Contribution
     //********************************
-    public void setIncome_Band_Contribution(){Income_Band_Contribution.click();}
-    public void setMax_Contribution_Member(String Amount1){Max_Contribution_Member.sendKeys();}
-    public void setMax_Contribution_Adult(String Amount1){Max_Contribution_Adult.sendKeys();}
-    public void setMax_Contribution_Child(String Amount1){Max_Contribution_Child.sendKeys();}
-    public void setMedian_Contribution_Member(String Amount1){Median_Contribution_Member.sendKeys();}
-    public  void setMedianContributionAdultDependent(String Amount1){MedianContributionAdultDependent.sendKeys();}
-    public void setMedianContributionChildDependent(String Amount1){medianContributionChildDependent.sendKeys();}
-    public void setMinContributionMember(String Amount1){minContributionMember.sendKeys();}
-    public void setMinContributionChildDependent(String Amount1){minContributionChildDependent.sendKeys();}
-    public void setMinContributionAdultDependent(String Amount1){minContributionAdultDependent.sendKeys();}
 
 
     //Methods for flat contribution
@@ -289,9 +261,7 @@ public class HomePage extends BasePage{
 
     //Methods for all modules
     //***************************************
-    public void Option_Status() {
-        Option_Status.click();
-    }
+
     public void setSave_Continue_btn() {
         Save_Continue_Btn.click();
     }
